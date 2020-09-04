@@ -1,0 +1,19 @@
+<%= form_with model: @game do |f| %>
+
+  <% if @game.errors.any? %>
+    <div id="error_messages">
+      <p>Sorry! We need a bit more information to get you started.</p>
+      <ul>
+        <% @game.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>What do you want to name your Jovian pale green dot?</p>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>
