@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'player/show'
+  get 'game/new'
+  get 'game/index'
+  get 'game/show'
+  get 'game/destroy'
+  get '/', to: 'title#index'
+
+  resources :game, :player
 end
