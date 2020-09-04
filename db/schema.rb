@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_031946) do
+ActiveRecord::Schema.define(version: 2020_09_04_041737) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string "status"
+    t.integer "water"
+    t.integer "age"
+    t.integer "wilt_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -22,6 +31,15 @@ ActiveRecord::Schema.define(version: 2020_09_04_031946) do
     t.string "name"
     t.string "pronoun_singular"
     t.string "pronoun_plural"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+    t.integer "water_need"
+    t.integer "age_need"
+    t.integer "wilt_tolerance"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

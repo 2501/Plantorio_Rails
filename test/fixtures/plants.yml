@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  water: 1
+  age: 1
+  wilt_count: 1
+
+two:
+  status: MyString
+  water: 1
+  age: 1
+  wilt_count: 1
