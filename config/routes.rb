@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  get 'player/show'
-  get 'game/new'
-  get 'game/index'
-  get 'game/show'
-  get 'game/destroy'
-  get '/', to: 'title#index'
+  get '/', to: 'title#index', as: 'title'
 
-  resources :game, :player
+  resources :game, only: [:new, :index, :show, :destroy]
+  resources :player, only: [:show]
 end
