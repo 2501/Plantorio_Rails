@@ -7,6 +7,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    @player = Player.new
   end
 
   def create
